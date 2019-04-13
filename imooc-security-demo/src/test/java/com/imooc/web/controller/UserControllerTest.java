@@ -5,6 +5,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.Bean;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -23,15 +24,11 @@ import org.springframework.web.context.WebApplicationContext;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @WebAppConfiguration
-@ContextConfiguration
 public class UserControllerTest {
-
 
     @Autowired
     private WebApplicationContext applicationContext;
 
-    // 伪造一个web的mvc环境，不会真正的启动tomcat环境
-    @Autowired
     private MockMvc mockMvc;
 
     @Before
