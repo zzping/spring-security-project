@@ -22,14 +22,7 @@ spring:
 #    enabled: false
 
 # demo项目的登录页，如果demo项目配置了登录页，就跳转到配置的登录页面，如果demo项目没做配置就跳转到默认的标准登录页
-#imooc:
-#  security:
-#    code:
-#      image:
-#        length: 6
-#        width: 50
-#        url: /user,/user/*
-#    browser:
-#      loginPage: /demo-signIn.html
-#      loginType: REDIRECT
-
+imooc:
+  security:
+    browser:
+      loginPage: /demo-signIn.html
