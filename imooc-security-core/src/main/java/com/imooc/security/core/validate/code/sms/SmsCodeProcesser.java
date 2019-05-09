@@ -1,4 +1,4 @@
-package com.imooc.security.core.sms;
+package com.imooc.security.core.validate.code.sms;
 
 import com.imooc.security.core.validate.code.ValidateCode;
 import com.imooc.security.core.validate.code.impl.AbstractValidateCodeProcessor;

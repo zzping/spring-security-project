@@ -1,4 +1,4 @@
-package com.imooc.security.core.validate.code;
+package com.imooc.security.core.validate.code.image;
 
 import com.imooc.security.core.validate.code.impl.AbstractValidateCodeProcessor;
 import org.springframework.stereotype.Component;

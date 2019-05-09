@@ -39,20 +39,12 @@ public abstract class AbstractValidateCodeProcessor<C extends ValidateCode> impl
     }
 
     /**
-     * 生成校验码
-     *  开发的技巧：依赖搜索
+     * 生成校验码：开发的技巧 => 依赖搜索
      * @param request
      * @return
      */
     @SuppressWarnings("unchecked")
     private C generate(ServletWebRequest request) {
-        /*String type = getValidateCodeType(request).toString().toLowerCase();
-        String generatorName = type + ValidateCodeGenerator.class.getSimpleName();
-        ValidateCodeGenerator validateCodeGenerator = validateCodeGenerators.get(generatorName);
-        if (validateCodeGenerator == null) {
-            throw new ValidateCodeException("验证码生成器" + generatorName + "不存在");
-        }
-        return (C) validateCodeGenerator.generate(request);*/
         String type = getValidateCodeType(request);
         ValidateCodeGenerator validateCodeGenerator = validateCodeGenerators.get(type + "CodeGenerator");
         return (C)validateCodeGenerator.generate(request);

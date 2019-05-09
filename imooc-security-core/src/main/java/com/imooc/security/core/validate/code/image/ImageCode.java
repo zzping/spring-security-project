@@ -1,5 +1,6 @@
-package com.imooc.security.core.validate.code;
+package com.imooc.security.core.validate.code.image;
 
+import com.imooc.security.core.validate.code.ValidateCode;
 import lombok.Data;
 
 import java.awt.image.BufferedImage;
