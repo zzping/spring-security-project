@@ -2,6 +2,7 @@ package com.imooc.code;
 
 import com.imooc.security.core.validate.code.ImageCode;
 import com.imooc.security.core.validate.code.ValidateCodeGenerator;
+import org.springframework.web.context.request.ServletWebRequest;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -13,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 public class DemoImageCodeGenerator implements ValidateCodeGenerator {
 
     @Override
-    public ImageCode createImageCode(HttpServletRequest request) {
+    public ImageCode generate(ServletWebRequest request) {
         System.out.println("自定义的图形验证码 - 可以覆盖默认的验证码生成逻辑");
         return null;
     }
